@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { services } from '../data/siteData';
+import { services, siteData } from '../data/siteData';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -65,34 +65,6 @@ export default function Services() {
               <h3 className="font-semibold text-xl text-gray-900 mb-2 relative z-10">{service.title}</h3>
               <p className="text-gray-600 mb-4 relative z-10 line-clamp-2">{service.description}</p>
 
-              <motion.ul
-                className="space-y-2 relative z-10"
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                transition={{ delay: 0.2 }}
-              >
-                {service.features.map((feature, i) => (
-                  <motion.li
-                    key={feature}
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.2 + i * 0.05 }}
-                    className="flex items-start gap-2 text-sm text-gray-600"
-                  >
-                    <motion.span
-                      className="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary"
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ delay: 0.25 + i * 0.05, type: 'spring', stiffness: 500, damping: 30 }}
-                    >
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </motion.span>
-                    <span>{feature}</span>
-                  </motion.li>
-                ))}
-              </motion.ul>
 
               <motion.button
                 className="btn-outline w-full mt-6 relative z-10"
@@ -114,7 +86,7 @@ export default function Services() {
         >
           <p className="text-gray-600 mb-4">Need a custom moving solution?</p>
           <motion.a
-            href={`https://wa.me/${require('../data/siteData').siteData.whatsapp.replace(/\D/g, '')}`}
+            href={`https://wa.me/${siteData.whatsapp.replace(/\D/g, '')}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-whatsapp inline-flex items-center gap-2"
