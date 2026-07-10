@@ -1,0 +1,19 @@
+# Robots.txt for Kashi Transport Packers and Movers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://kashitransport.in/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 10
+
+# Disallow admin and private paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$

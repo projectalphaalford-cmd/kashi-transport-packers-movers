@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0a2463;
+  --color-primary-light: #1e3a8a;
+  --color-primary-dark: #061a4a;
+  --color-secondary: #f97316;
+  --color-secondary-light: #fb923c;
+  --color-secondary-dark: #ea580c;
+  --color-accent: #0ea5e9;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-gray-800 antialiased;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+  }
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-secondary px-6 py-3 text-white font-semibold transition-all duration-300 hover:bg-secondary-dark hover:shadow-lg hover:shadow-secondary/25 active:scale-[0.97] cursor-pointer;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white px-6 py-3 text-white font-semibold transition-all duration-300 hover:bg-white hover:text-primary cursor-pointer;
+  }
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-green-500 px-6 py-3 text-white font-semibold transition-all duration-300 hover:bg-green-600 hover:shadow-lg hover:shadow-green-500/25 active:scale-[0.97] cursor-pointer;
+  }
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-primary text-center;
+  }
+  .section-subtitle {
+    @apply text-gray-600 text-center mt-4 max-w-2xl mx-auto text-lg;
+  }
+  .card {
+    @apply bg-white rounded-2xl p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+}
