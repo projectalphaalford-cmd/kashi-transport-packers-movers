@@ -11,6 +11,7 @@ import FAQ from './components/FAQ'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import { siteData } from './data/siteData'
+import heroImage from './assets/hero.png'
 
 function LocalBusinessSchema() {
   const schema = {
@@ -18,7 +19,7 @@ function LocalBusinessSchema() {
     '@type': 'LocalBusiness',
     name: siteData.name,
     description: siteData.description,
-    image: 'https://kashitransport.in/hero.png',
+    image: heroImage,
     url: 'https://kashitransport.in',
     telephone: siteData.phone,
     email: siteData.email,
